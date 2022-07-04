@@ -1,3 +1,6 @@
 123|123|abc|User
 323|abcd|abc|Admin
 18371971|Sifat7197|Sifat|Admin
+1234|1234|Sifat|Admin
+104100|Afra123|Anika|User
+12345|sabina|Sabina|User

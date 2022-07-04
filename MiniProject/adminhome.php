@@ -5,10 +5,13 @@
 <html>
     <body>
         <h1 align="center" >Welcome Home, <?php echo $_GET['name'];?></h1>
-		<a href="profile.php">Profile</a><br>
-		<a href="changepassword.php">Change Password</a><br>
-		<a href="userlist.php">View Users</a><br>
-        <a href="logout.php"> Logout </a>
+		
+		<fieldset>
+			<a href="adminprofile.php">Edit Profile</a><br>
+			<a href="adminchangepassword.php">Change Password</a><br>
+			<a href="userlist.php">View Users</a><br>
+			<a href="logout.php"> Logout </a>
+		</fieldset>
     </body>
 </html>
 

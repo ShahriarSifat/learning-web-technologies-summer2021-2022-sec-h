@@ -4,10 +4,14 @@
 ?>
 <html>
     <body>
-        <h1 align="center">Welcome Home</h1>
-		<a href="profile.php">Profile</a><br>
-		<a href="changepassword.php">Change Password</a><br>
-        <a href="logout.php"> Logout </a>
+        <h1 align="center">Welcome Home, <?php echo $_GET['name'];?></h1>
+
+		<fieldset>
+			
+				<a href="userprofile.php">Edit Profile</a><br>
+				<a href="userchangepassword.php">Change Password</a><br>
+				<a href="logout.php"> Logout </a>
+		</fieldset>
     </body>
 
 </html>

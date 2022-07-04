@@ -2,7 +2,7 @@
 
 $id = $_REQUEST['id'];
 $password = $_REQUEST['password'];
-$name = $_REQUEST['name'];
+
 $type = 'Admin';
 
 if($id == null || $password == null){
@@ -16,16 +16,20 @@ if($id == null || $password == null){
 		$user = explode("|", $data);
         
 		if($id == trim($user[0]) && $password == trim($user[1]) && $type == trim($user[3])) {
-            $name = trim([user[2]]);
+            $n = trim($user[2]);
+			
 			setcookie('status', 'true', time()+360, '/');		
-			header('location: adminhome.php?name='.$name);
-		}else{
-            $name = trim([user[2]]);
-            setcookie('status', 'true', time()+360, '/');		
-			header('location: userhome.php?name='.$name);
-        }
+			header('location: adminhome.php?name='.$n);
+		}elseif($id == trim($user[0]) && $password == trim($user[1]) && $type != trim($user[3])){
+            $n = trim($user[2]);
+			
+            setcookie('status', 'true', time()+360, '/');	
+			header('location: userhome.php?name='.$n);
+        }else{
+			echo "invalid id/password";
 	}
 
-	echo "invalid id/password";
+	}
+
 }
 ?>
